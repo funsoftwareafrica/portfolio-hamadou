@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamadou Ali Abdoul-Latif | Full-Stack Fintech Developer | React · FastAPI · Flutter</title>
+    <meta name="description" content="Développeur Full-Stack spécialisé Fintech Afrique. React, FastAPI, Symfony, Flutter. 500+ utilisateurs, transactions <100ms. Disponible freelance remote.">
+    <meta name="keywords" content="développeur full-stack, fintech, react, fastapi, symfony, flutter, niger, freelance, mobile money, pwa">
+    <meta name="author" content="Hamadou Ali Abdoul-latif">
+    <meta property="og:title" content="Hamadou Ali Abdoul-Latif | Full-Stack Fintech Developer">
+    <meta property="og:description" content="Développeur Full-Stack spécialisé Fintech. 500+ utilisateurs, transactions <100ms.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+<base target="_blank">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>Hamadou<span class="logo-bracket">/&gt;</span>
+            </a>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">À propos</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#projects" class="nav-link">Projets</a></li>
+                <li><a href="#skills" class="nav-link">Compétences</a></li>
+                <li><a href="#experience" class="nav-link">Expérience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#contact" class="nav-link btn-cv"><i class="fas fa-download"></i> CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg-pattern"></div>
+        <div class="hero-particles" id="particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Disponible pour freelance & missions remote
+                </div>
+                <h1 class="hero-title">
+                    <span class="hero-greeting">Bonjour, je suis</span><br>
+                    <span class="gradient-text">Hamadou Ali</span><br>
+                    <span class="hero-subtitle-line">Développeur Full-Stack Fintech</span>
+                </h1>
+                <p class="hero-description">
+                    Je combine <strong>React · FastAPI · Symfony · Flutter</strong> pour construire des solutions financières 
+                    sécurisées qui fonctionnent parfaitement en Afrique — même hors ligne.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-count="500">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Utilisateurs beta</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="18">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Mois d'expérience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="5">0</span>
+                        <span class="stat-label">Projets en production</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">&lt;100</span><span class="stat-suffix">ms</span>
+                        <span class="stat-label">Transactions</span>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> Voir mes réalisations
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-handshake"></i> Discuter d'un projet
+                    </a>
+                    <a href="#contact" class="btn btn-outline btn-cv">
+                        <i class="fas fa-file-pdf"></i> Demander mon CV
+                    </a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/funsoftwareafrica" target="_blank" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/hamadou-ali-abdoul-latif-41588a284" target="_blank" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:abdoulatif360@gmail.com" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://antelopepay.vercel.app" target="_blank" class="social-link" aria-label="AntelopePay">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">À propos</span>
+                <h2 class="section-title">Du terrain fintech au code de <span class="highlight">production</span></h2>
+                <p class="section-subtitle">Basé à Niamey, Niger — disponible fuseau Europe/Paris (UTC+1)</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card about-main">
+                    <div class="about-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Développeur Full-Stack</h3>
+                    <p>Spécialisé en <strong>React/Next.js</strong> (frontend) et <strong>Python/FastAPI</strong> & <strong>PHP/Symfony</strong> (backend). Je conçois des applications web et mobiles performantes, adaptées aux contraintes africaines.</p>
+                    <div class="about-quote">
+                        <i class="fas fa-quote-left"></i>
+                        <span>Le code est une toile, chaque projet une œuvre unique.</span>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon icon-fintech">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Expertise Fintech Terrain</h3>
+                    <p>Connaissance approfondie de l'écosystème <strong>Mobile Money</strong>, KYC, compliance et flux de transactions. Je conçois des solutions qui fonctionnent avec des connexions intermittentes.</p>
+                    <div class="about-badges">
+                        <span class="mini-badge">KYC</span>
+                        <span class="mini-badge">Mobile Money</span>
+                        <span class="mini-badge">Transferts</span>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon icon-offline">
+                        <i class="fas fa-wifi-slash"></i>
+                    </div>
+                    <h3>Offline-First Specialist</h3>
+                    <p>Mon atout majeur : des applications <strong>PWA</strong> avec IndexedDB, Web Workers et sync intelligente. Parfait pour les zones à faible connectivité en Afrique et au-delà.</p>
+                    <div class="about-badges">
+                        <span class="mini-badge">PWA</span>
+                        <span class="mini-badge">IndexedDB</span>
+                        <span class="mini-badge">Sync</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Services</span>
+                <h2 class="section-title">Ce que je peux <span class="highlight">apporter</span></h2>
+                <p class="section-subtitle">De l'idée au déploiement — livraison rapide, code propre, documentation complète</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3>Développement Frontend React</h3>
+                    <p>Applications web modernes avec React, Next.js et TypeScript. Interfaces réactives, optimisées pour l'Afrique (connexion limitée).</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> SPA & SSR avec Next.js</li>
+                        <li><i class="fas fa-check"></i> UI/UX responsive mobile-first</li>
+                        <li><i class="fas fa-check"></i> PWA & mode hors ligne</li>
+                        <li><i class="fas fa-check"></i> Dashboards & dataviz (Recharts)</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>API & Backend</h3>
+                    <p>APIs REST performantes avec FastAPI (Python) ou Symfony (PHP). Architecture propre, documentation Swagger, tests automatisés.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> FastAPI & Python 3.11</li>
+                        <li><i class="fas fa-check"></i> Symfony 5/6 & PHP 8</li>
+                        <li><i class="fas fa-check"></i> JWT/OAuth2 sécurisé</li>
+                        <li><i class="fas fa-check"></i> PostgreSQL & MySQL optimisé</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Applications Mobiles</h3>
+                    <p>Apps cross-platform iOS/Android avec Flutter. Une codebase, deux plateformes. Intégration API, paiement, notifications.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Flutter & Dart</li>
+                        <li><i class="fas fa-check"></i> React Native (bases)</li>
+                        <li><i class="fas fa-check"></i> PWA mobile-first</li>
+                        <li><i class="fas fa-check"></i> Publication stores</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <h3>Déploiement & DevOps</h3>
+                    <p>Conteneurisation Docker, CI/CD avec GitHub Actions, hébergement sur Vercel/Render pour applications scalables.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Docker & Docker Compose</li>
+                        <li><i class="fas fa-check"></i> CI/CD GitHub Actions</li>
+                        <li><i class="fas fa-check"></i> Vercel, Render, Netlify</li>
+                        <li><i class="fas fa-check"></i> Tests automatisés 92% couverture</li>
+                    </ul>
+                </div>
+                <div class="service-card featured">
+                    <div class="service-badge">🔥 Spécialité</div>
+                    <div class="service-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Fintech & Mobile Money</h3>
+                    <p>Mon expertise unique : je conçois des solutions financières sécurisées avec connaissance terrain des opérations de transfert d'argent et mobile money.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Portefeuilles digitaux & wallets</li>
+                        <li><i class="fas fa-check"></i> Intégration paiement mobile</li>
+                        <li><i class="fas fa-check"></i> KYC & compliance</li>
+                        <li><i class="fas fa-check"></i> Transactions <100ms</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>MVP & Prototypage Rapide</h3>
+                    <p>Besoin de valider une idée rapidement ? Je livre des MVPs fonctionnels en 2-3 semaines pour tester votre marché.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> MVP en 2-3 semaines</li>
+                        <li><i class="fas fa-check"></i> Prototype interactif</li>
+                        <li><i class="fas fa-check"></i> Itération rapide</li>
+                        <li><i class="fas fa-check"></i> Scale-ready architecture</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Projets</span>
+                <h2 class="section-title">De l'idée à la <span class="highlight">production</span></h2>
+                <p class="section-subtitle">Des applications fonctionnelles, pensées pour une solution durable</p>
+            </div>
+            
+            <!-- AntelopePay -->
+            <div class="project-card featured">
+                <div class="project-badge">🏆 Projet phare</div>
+                <div class="project-content">
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag tag-fintech">Fintech</span>
+                            <span class="tag tag-live">🟢 Live</span>
+                            <span class="tag tag-beta">500+ users</span>
+                        </div>
+                        <h3 class="project-title">AntelopePay</h3>
+                        <p class="project-desc">Application bancaire web d'inclusion financière inspirée de la faune africaine. Transferts instantanés, recharges téléphoniques, paiement de factures, mode hors ligne intelligent.</p>
+                        <div class="project-features">
+                            <div class="feature"><i class="fas fa-bolt"></i> Transactions <100ms</div>
+                            <div class="feature"><i class="fas fa-users"></i> 500+ utilisateurs beta</div>
+                            <div class="feature"><i class="fas fa-wifi-slash"></i> Mode hors ligne</div>
+                            <div class="feature"><i class="fas fa-shield-alt"></i> JWT + Biométrie</div>
+                            <div class="feature"><i class="fas fa-qrcode"></i> QR Code payments</div>
+                            <div class="feature"><i class="fas fa-chart-line"></i> Dashboard Recharts</div>
+                        </div>
+                        <div class="project-stack">
+                            <span class="stack-item">React</span>
+                            <span class="stack-item">FastAPI</span>
+                            <span class="stack-item">PostgreSQL</span>
+                            <span class="stack-item">TypeScript</span>
+                            <span class="stack-item">Tailwind CSS</span>
+                            <span class="stack-item">Docker</span>
+                            <span class="stack-item">JWT</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://antelopepay.vercel.app" target="_blank" class="btn btn-primary btn-sm">
+                                <i class="fas fa-external-link-alt"></i> Voir la démo
+                            </a>
+                            <a href="https://github.com/funsoftwareafrica/antelopepay" target="_blank" class="btn btn-outline btn-sm">
+                                <i class="fab fa-github"></i> Code source
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <div class="project-mockup">
+                            <div class="mockup-header">
+                                <div class="mockup-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <span class="mockup-url">antelopepay.vercel.app</span>
+                            </div>
+                            <div class="mockup-body">
+                                <div class="mockup-balance">
+                                    <span class="mockup-label">Solde disponible</span>
+                                    <span class="mockup-amount">125,000 FCFA</span>
+                                </div>
+                                <div class="mockup-actions">
+                                    <div class="mockup-action"><i class="fas fa-paper-plane"></i><span>Envoyer</span></div>
+                                    <div class="mockup-action"><i class="fas fa-qrcode"></i><span>Payer</span></div>
+                                    <div class="mockup-action"><i class="fas fa-file-invoice"></i><span>Factures</span></div>
+                                    <div class="mockup-action"><i class="fas fa-chart-line"></i><span>Stats</span></div>
+                                </div>
+                                <div class="mockup-transactions">
+                                    <div class="mockup-tx">
+                                        <div class="mockup-tx-icon"><i class="fas fa-arrow-down"></i></div>
+                                        <div class="mockup-tx-info">
+                                            <span>Reçu de Aminata D.</span>
+                                            <span>Il y a 2 min</span>
+                                        </div>
+                                        <span class="mockup-tx-amount">+15,000 FCFA</span>
+                                    </div>
+                                    <div class="mockup-tx">
+                                        <div class="mockup-tx-icon out"><i class="fas fa-arrow-up"></i></div>
+                                        <div class="mockup-tx-info">
+                                            <span>Paiement NIGELEC</span>
+                                            <span>Il y a 1h</span>
+                                        </div>
+                                        <span class="mockup-tx-amount out">-8,500 FCFA</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SIA-Niger -->
+            <div class="project-card">
+                <div class="project-content reverse">
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag tag-pwa">PWA</span>
+                            <span class="tag tag-offline">Offline-First</span>
+                            <span class="tag tag-deployed">🟢 Déployé</span>
+                        </div>
+                        <h3 class="project-title">SIA-Niger</h3>
+                        <p class="project-desc">Transformation d'un outil Excel complexe en PWA React pour le projet PARIIS. Analyse d'irrigation, calculs financiers (VAN, TRI, BFR) en Web Workers, stockage offline IndexedDB.</p>
+                        <div class="project-features">
+                            <div class="feature"><i class="fas fa-calculator"></i> Calculs VAN/TRI/BFR</div>
+                            <div class="feature"><i class="fas fa-wifi-slash"></i> Mode hors ligne complet</div>
+                            <div class="feature"><i class="fas fa-file-pdf"></i> Export PDF & Excel</div>
+                            <div class="feature"><i class="fas fa-map-marker-alt"></i> Convertisseur GPS</div>
+                        </div>
+                        <div class="project-stack">
+                            <span class="stack-item">React</span>
+                            <span class="stack-item">TypeScript</span>
+                            <span class="stack-item">IndexedDB</span>
+                            <span class="stack-item">Web Workers</span>
+                            <span class="stack-item">PWA</span>
+                        </div>
+                        <div class="project-links">
+                            <span class="btn btn-outline btn-sm disabled">
+                                <i class="fas fa-lock"></i> Dépôt privé
+                            </span>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <div class="project-mockup pwa-mockup">
+                            <div class="mockup-body">
+                                <div class="mockup-offline-badge">
+                                    <i class="fas fa-wifi-slash"></i> Mode hors ligne actif
+                                </div>
+                                <div class="mockup-calc">
+                                    <div class="mockup-calc-row">
+                                        <span>Investissement initial</span>
+                                        <span>2,500,000 FCFA</span>
+                                    </div>
+                                    <div class="mockup-calc-row">
+                                        <span>VAN (5 ans)</span>
+                                        <span class="positive">+485,200 FCFA</span>
+                                    </div>
+                                    <div class="mockup-calc-row">
+                                        <span>TRI</span>
+                                        <span class="positive">18.4%</span>
+                                    </div>
+                                    <div class="mockup-calc-row">
+                                        <span>BFR</span>
+                                        <span>320,000 FCFA</span>
+                                    </div>
+                                </div>
+                                <button class="mockup-btn">
+                                    <i class="fas fa-file-pdf"></i> Générer rapport PDF
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SAPANI SARL -->
+            <div class="project-card">
+                <div class="project-content">
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag tag-ecommerce">E-commerce</span>
+                            <span class="tag tag-live">🟢 Live</span>
+                            <span class="tag tag-prod">50+ producteurs</span>
+                        </div>
+                        <h3 class="project-title">SAPANI SARL</h3>
+                        <p class="project-desc">Plateforme e-commerce agricole connectant producteurs locaux et consommateurs. Catalogue produits, panier, paiement simulé, dashboard admin analytique complet.</p>
+                        <div class="project-features">
+                            <div class="feature"><i class="fas fa-tractor"></i> 50+ producteurs enregistrés</div>
+                            <div class="feature"><i class="fas fa-chart-bar"></i> Analytics temps réel</div>
+                            <div class="feature"><i class="fas fa-shopping-cart"></i> Panier & commandes</div>
+                            <div class="feature"><i class="fas fa-credit-card"></i> Paiement simulé</div>
+                        </div>
+                        <div class="project-stack">
+                            <span class="stack-item">PHP</span>
+                            <span class="stack-item">Symfony</span>
+                            <span class="stack-item">JavaScript</span>
+                            <span class="stack-item">Bootstrap</span>
+                            <span class="stack-item">MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="http://sapani.kesug.com" target="_blank" class="btn btn-primary btn-sm">
+                                <i class="fas fa-external-link-alt"></i> Visiter le site
+                            </a>
+                            <a href="https://github.com/funsoftwareafrica/sapani" target="_blank" class="btn btn-outline btn-sm">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <div class="project-mockup dashboard-mockup">
+                            <div class="mockup-header">
+                                <span><i class="fas fa-chart-line"></i> Dashboard SAPANI</span>
+                            </div>
+                            <div class="mockup-body">
+                                <div class="mockup-stats-row">
+                                    <div class="mockup-stat-card">
+                                        <span class="mockup-stat-val">1,240</span>
+                                        <span class="mockup-stat-lbl">Commandes</span>
+                                    </div>
+                                    <div class="mockup-stat-card">
+                                        <span class="mockup-stat-val">52</span>
+                                        <span class="mockup-stat-lbl">Producteurs</span>
+                                    </div>
+                                    <div class="mockup-stat-card">
+                                        <span class="mockup-stat-val">8.2M</span>
+                                        <span class="mockup-stat-lbl">FCFA CA</span>
+                                    </div>
+                                </div>
+                                <div class="mockup-chart">
+                                    <div class="mockup-bar" style="height:40%"></div>
+                                    <div class="mockup-bar" style="height:65%"></div>
+                                    <div class="mockup-bar" style="height:45%"></div>
+                                    <div class="mockup-bar" style="height:80%"></div>
+                                    <div class="mockup-bar" style="height:55%"></div>
+                                    <div class="mockup-bar" style="height:90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FlixStream -->
+            <div class="project-card">
+                <div class="project-content reverse">
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag tag-mobile">Mobile</span>
+                            <span class="tag tag-streaming">Streaming</span>
+                            <span class="tag tag-stage">Stage 4 mois</span>
+                        </div>
+                        <h3 class="project-title">FlixStream (ZAMOHA)</h3>
+                        <p class="project-desc">Application de streaming vidéo cross-platform développée lors de mon stage chez ZAMOHA. iOS & Android avec Flutter, API REST Symfony sécurisée JWT, gestion abonnements et paiement.</p>
+                        <div class="project-features">
+                            <div class="feature"><i class="fas fa-mobile-alt"></i> iOS & Android</div>
+                            <div class="feature"><i class="fas fa-users"></i> 200+ utilisateurs pilotes</div>
+                            <div class="feature"><i class="fas fa-shield-alt"></i> JWT sécurisé</div>
+                            <div class="feature"><i class="fas fa-credit-card"></i> Gestion abonnements</div>
+                        </div>
+                        <div class="project-stack">
+                            <span class="stack-item">Flutter</span>
+                            <span class="stack-item">Dart</span>
+                            <span class="stack-item">Symfony</span>
+                            <span class="stack-item">JWT</span>
+                            <span class="stack-item">MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/funsoftwareafrica/flixstream" target="_blank" class="btn btn-outline btn-sm">
+                                <i class="fab fa-github"></i> Code source
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <div class="project-mockup mobile-mockup">
+                            <div class="mockup-phone">
+                                <div class="mockup-notch"></div>
+                                <div class="mockup-screen">
+                                    <div class="mockup-video-thumb">
+                                        <i class="fas fa-play-circle"></i>
+                                    </div>
+                                    <div class="mockup-video-info">
+                                        <span class="mockup-vtitle">Nollywood Series S2E5</span>
+                                        <span class="mockup-vmeta">Premium • 45 min</span>
+                                    </div>
+                                    <div class="mockup-video-controls">
+                                        <i class="fas fa-step-backward"></i>
+                                        <i class="fas fa-pause"></i>
+                                        <i class="fas fa-step-forward"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BookHub API -->
+            <div class="project-card">
+                <div class="project-content">
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag tag-api">API</span>
+                            <span class="tag tag-tests">92% tests</span>
+                            <span class="tag tag-docs">Swagger</span>
+                        </div>
+                        <h3 class="project-title">BookHub API</h3>
+                        <p class="project-desc">API REST complète de gestion de bibliothèque. CRUD livres/auteurs/emprunts, authentification par rôles, 92% de couverture de tests, documentation Swagger auto-générée.</p>
+                        <div class="project-features">
+                            <div class="feature"><i class="fas fa-book"></i> CRUD complet</div>
+                            <div class="feature"><i class="fas fa-user-shield"></i> Auth par rôles</div>
+                            <div class="feature"><i class="fas fa-vial"></i> 92% couverture tests</div>
+                            <div class="feature"><i class="fas fa-file-code"></i> Swagger auto</div>
+                        </div>
+                        <div class="project-stack">
+                            <span class="stack-item">FastAPI</span>
+                            <span class="stack-item">PostgreSQL</span>
+                            <span class="stack-item">SQLAlchemy</span>
+                            <span class="stack-item">Docker</span>
+                            <span class="stack-item">JWT</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/funsoftwareafrica/bookhub-api" target="_blank" class="btn btn-outline btn-sm">
+                                <i class="fab fa-github"></i> Code source
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <div class="project-mockup api-mockup">
+                            <div class="mockup-header">
+                                <span><i class="fas fa-terminal"></i> BookHub API</span>
+                                <span class="mockup-status">200 OK</span>
+                            </div>
+                            <div class="mockup-body">
+                                <div class="mockup-endpoint">
+                                    <span class="method get">GET</span>
+                                    <span class="path">/api/v1/books</span>
+                                    <span class="response">200</span>
+                                </div>
+                                <div class="mockup-endpoint">
+                                    <span class="method post">POST</span>
+                                    <span class="path">/api/v1/books</span>
+                                    <span class="response">201</span>
+                                </div>
+                                <div class="mockup-endpoint">
+                                    <span class="method put">PUT</span>
+                                    <span class="path">/api/v1/books/42</span>
+                                    <span class="response">200</span>
+                                </div>
+                                <div class="mockup-endpoint">
+                                    <span class="method delete">DEL</span>
+                                    <span class="path">/api/v1/books/42</span>
+                                    <span class="response">204</span>
+                                </div>
+                                <div class="mockup-json">
+<pre>{
+  "id": 42,
+  "title": "L'Étranger",
+  "author": "Camus",
+  "available": true
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Compétences</span>
+                <h2 class="section-title">Stack technique <span class="highlight">moderne</span></h2>
+                <p class="section-subtitle">Des technologies éprouvées, choisies pour la performance et la scalabilité</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Back-end & API</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item" data-level="90">
+                            <span class="skill-name">Python / FastAPI</span>
+                            <div class="skill-bar"><div class="skill-fill"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="85">
+                            <span class="skill-name">PHP / Symfony 5/6</span>
+                            <div class="skill-bar"><div class="skill-fill"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="80">
+                            <span class="skill-name">Laravel</span>
+                            <div class="skill-bar"><div class="skill-fill"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="90">
+                            <span class="skill-name">REST API / JWT / OAuth2</span>
+                            <div class="skill-bar"><div class="skill-fill"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Front-end</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item" data-level="90">
+                            <span class="skill-name">React.js / Next.js</span>
+                            <div class="skill-bar"><div class="skill-fill"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="85">
+                            <span class="skill-name">TypeScript</span>
+                            <div class="skill-bar"><div class="skill-fill"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="90">
+                            <span class="skill-name">Tailwind CSS / Bootstrap</span>
+                            <div class="skill-bar"><div class="skill-fill"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="85">
+                            <span class="skill-name">HTML5 / CSS3 / ES6+</span>
+                            <div class="skill-bar"><div class="skill-fill"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item" data-level="85">
+                            <span class="skill-name">Flutter / Dart</span>
+                            <div class="skill-bar"><div class="skill-fill"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="70">
+                            <span class="skill-name">React Native</span>
+                            <div class="skill-bar"><div class="skill-fill"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="90">
+                            <span class="skill-name">PWA / Offline-First</span>
+                            <div class="skill-bar"><div class="skill-fill"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Bases de données & DevOps</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item" data-level="85">
+                            <span class="skill-name">PostgreSQL</span>
+                            <div class="skill-bar"><div class="skill-fill"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="80">
+                            <span class="skill-name">MySQL / SQLite</span>
+                            <div class="skill-bar"><div class="skill-fill"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="75">
+                            <span class="skill-name">Docker / CI/CD</span>
+                            <div class="skill-bar"><div class="skill-fill"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="85">
+                            <span class="skill-name">Git / GitHub / Jira</span>
+                            <div class="skill-bar"><div class="skill-fill"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-footer">
+                <div class="skill-pills">
+                    <span class="skill-pill"><i class="fas fa-check-circle"></i> OWASP Security</span>
+                    <span class="skill-pill"><i class="fas fa-check-circle"></i> Agile / Scrum</span>
+                    <span class="skill-pill"><i class="fas fa-check-circle"></i> Figma</span>
+                    <span class="skill-pill"><i class="fas fa-check-circle"></i> Postman</span>
+                    <span class="skill-pill"><i class="fas fa-check-circle"></i> Framer Motion</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Parcours</span>
+                <h2 class="section-title">Expérience <span class="highlight">professionnelle</span></h2>
+                <p class="section-subtitle">De l'indépendance au terrain corporate — une vision 360° du développement</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024 — Présent</span>
+                        <h3>Développeur Full-Stack Freelance</h3>
+                        <span class="timeline-company">Indépendant — Niamey, Niger</span>
+                        <p>Réalisation de projets pour des clients locaux (SAPANI SARL, SIA-Niger/PARIIS). Conception et déploiement d'applications web/mobiles répondant à des besoins réels. Gestion complète du cycle de développement.</p>
+                        <div class="timeline-tags">
+                            <span>React</span>
+                            <span>FastAPI</span>
+                            <span>Flutter</span>
+                            <span>Freelance</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Avril 2025 — Présent</span>
+                        <h3>Agent Commercial</h3>
+                        <span class="timeline-company">NITA Transfert d'Argent — Niamey, Niger</span>
+                        <p>Gestion des opérations de transfert d'argent, conseil clientèle sur les produits Mobile Money. Connaissance approfondie de l'écosystème fintech au Niger — KYC, compliance, flux de transactions.</p>
+                        <div class="timeline-tags">
+                            <span>Fintech</span>
+                            <span>Mobile Money</span>
+                            <span>KYC</span>
+                            <span>Compliance</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Mai — Juillet 2025</span>
+                        <h3>Assistant Développeur (Stage)</h3>
+                        <span class="timeline-company">NIGERTELECOMS — Niamey, Niger</span>
+                        <p>Conception d'une plateforme web de gestion des contrats clients. Développement de modules de gestion de dossiers, tests unitaires, documentation technique. Collaboration avec les équipes métier.</p>
+                        <div class="timeline-tags">
+                            <span>Symfony</span>
+                            <span>PostgreSQL</span>
+                            <span>JavaScript</span>
+                            <span>Tests unitaires</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Juin — Septembre 2024</span>
+                        <h3>Développeur Web & Mobile (Stage)</h3>
+                        <span class="timeline-company">ZAMOHA — Niamey, Niger</span>
+                        <p>Développement de l'application de streaming FlixStream avec Flutter (iOS/Android). API REST Symfony sécurisée JWT, intégration PostgreSQL avec Doctrine ORM, système d'abonnement et paiement.</p>
+                        <div class="timeline-tags">
+                            <span>Flutter</span>
+                            <span>Symfony</span>
+                            <span>JWT</span>
+                            <span>Dart</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2022 — 2025</span>
+                        <h3>Licence en Génie Logiciel</h3>
+                        <span class="timeline-company">ESCEP-NIGER — Niamey</span>
+                        <p>Architecture logicielle, développement web/mobile, bases de données avancées. Projet de fin d'études : application de gestion scolaire (Symfony/Flutter). Formations certifiantes Udemy & OpenClassrooms.</p>
+                        <div class="timeline-tags">
+                            <span>Architecture</span>
+                            <span>Symfony</span>
+                            <span>Flutter</span>
+                            <span>Certifications</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-content">
+                    <h2>Prêt à donner vie à votre <span class="gradient-text">projet fintech</span> ?</h2>
+                    <p>Je livre des MVPs en 2-3 semaines et des produits complets en 1-2 mois. Basé à Niamey, je travaille en synchronisation avec les fuseaux horaires européens.</p>
+                    <div class="cta-rates-inline">
+                        <span class="rate-tag"><i class="fas fa-tag"></i> $18-25/heure</span>
+                        <span class="rate-tag"><i class="fas fa-box"></i> MVP from $1,500</span>
+                        <span class="rate-tag"><i class="fas fa-calendar-check"></i> Disponible immédiatement</span>
+                    </div>
+                </div>
+                <div class="cta-actions">
+                    <a href="mailto:abdoulatif360@gmail.com?subject=Projet%20freelance%20-%20Contact" class="btn btn-primary btn-large">
+                        <i class="fas fa-paper-plane"></i> Me contacter
+                    </a>
+                    <a href="#contact" class="btn btn-outline btn-large">
+                        <i class="fas fa-file-pdf"></i> Demander mon CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Contact</span>
+                <h2 class="section-title">Travaillons <span class="highlight">ensemble</span></h2>
+                <p class="section-subtitle">Intéressé par mon profil ? N'hésitez pas à me contacter</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Discutons de votre projet</h3>
+                    <p>Je suis disponible pour du freelance, des collaborations long terme, ou simplement pour échanger sur vos idées. Réponse sous 24h garantie.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span>Email</span>
+                                <a href="mailto:abdoulatif360@gmail.com">abdoulatif360@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <span>Téléphone</span>
+                                <span>Disponible sur demande</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span>Localisation</span>
+                                <span>Niamey, Niger (UTC+1) — Fuseau Europe/Paris</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-language"></i>
+                            <div>
+                                <span>Langues</span>
+                                <span>Français (courant) · Anglais (intermédiaire technique)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://github.com/funsoftwareafrica" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/hamadou-ali-abdoul-latif-41588a284" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://antelopepay.vercel.app" target="_blank" class="social-link">
+                            <i class="fas fa-rocket"></i>
+                        </a>
+                        <a href="mailto:abdoulatif360@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="d753c161-9fd8-434c-b78d-4a464761558e">
+                        <input type="hidden" name="subject" value="Nouveau message depuis le portfolio">
+                        <input type="hidden" name="from_name" value="Portfolio Hamadou Ali">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Votre email" required>
+                        </div>
+                        <div class="form-group">
+                            <select name="subject">
+                                <option value="">Sujet de votre message</option>
+                                <option value="opportunite-emploi">Opportunité d'emploi</option>
+                                <option value="projet-freelance">Projet freelance</option>
+                                <option value="collaboration">Collaboration</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" rows="4" placeholder="Décrivez votre projet..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i> Envoyer le message
+                        </button>
+                    </form>
+                    <div class="contact-note">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Mon CV complet est disponible sur demande via ce formulaire. Pour des raisons de sécurité, il n'est pas téléchargeable directement.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-bracket">&lt;</span>Hamadou<span class="logo-bracket">/&gt;</span>
+                    <p>Développeur Full-Stack Fintech — Niamey, Niger</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">À propos</a>
+                    <a href="#services">Services</a>
+                    <a href="#projects">Projets</a>
+                    <a href="#skills">Compétences</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://github.com/funsoftwareafrica" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/hamadou-ali-abdoul-latif-41588a284" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:abdoulatif360@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Hamadou Ali Abdoul-Latif. Développé avec ❤️ à Niamey.</p>
+                <p class="footer-stack">React · FastAPI · Flutter · PostgreSQL · Docker</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
