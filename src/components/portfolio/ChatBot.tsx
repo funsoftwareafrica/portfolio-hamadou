@@ -4,9 +4,9 @@ import * as React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { MessageCircle, X, Send, Loader2, Bot, User } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader } from '@/components/ui/card'
-import { ScrollArea } from '@/components/ui/scroll-area'
+import { Card, CardHeader } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
+import ReactMarkdown from 'react-markdown'
 
 type Message = {
   role: 'user' | 'assistant'
@@ -14,11 +14,19 @@ type Message = {
 }
 
 const QUICK_REPLIES = [
-  'Quels sont vos services ?',
-  'Pouvez-vous faire un e-commerce ?',
-  'Comment se déroule une collaboration ?',
-  'Quelles technologies utilisez-vous ?',
+  '🛒 Créer une boutique en ligne',
+  '📱 Développer une app mobile',
+  '💰 Vos tarifs et délais ?',
+  '📋 Vos services',
 ]
+
+function BotMessage({ content }: { content: string }) {
+  return (
+    <div className="prose prose-sm max-w-none dark:prose-invert prose-p:my-1 prose-headings:my-2 prose-ul:my-1 prose-ol:my-1 prose-li:my-0.5 prose-strong:text-foreground prose-p:text-foreground/90 prose-li:text-foreground/90">
+      <ReactMarkdown>{content}</ReactMarkdown>
+    </div>
+  )
+}
 
 export function ChatBot() {
   const [open, setOpen] = React.useState(false)
@@ -26,7 +34,7 @@ export function ChatBot() {
     {
       role: 'assistant',
       content:
-        "Bonjour ! 👋 Je suis l'assistant IA de Hamadou. Posez-moi des questions sur ses services, ses tarifs ou sa méthode de travail. Je suis là pour vous aider !",
+        'Bonjour ! 👋\n\nJe suis l\'assistant virtuel de **Hamadou Ali Abdoul-Latif**, développeur Full-Stack.\n\nComment puis-je vous aider ?\n',
     },
   ])
   const [input, setInput] = React.useState('')
@@ -79,7 +87,7 @@ export function ChatBot() {
         {
           role: 'assistant',
           content:
-            "Désolé, une erreur est survenue. Veuillez réessayer ou m'envoyer un message via le formulaire de contact.",
+            'Désolé, une erreur est survenue. Veuillez réessayer ou utiliser le **formulaire de contact** en bas de la page.',
         },
       ])
     } finally {
@@ -94,7 +102,6 @@ export function ChatBot() {
 
   return (
     <>
-      {/* FAB button */}
       <AnimatePresence>
         {!open && (
           <motion.div
@@ -114,7 +121,6 @@ export function ChatBot() {
         )}
       </AnimatePresence>
 
-      {/* Chat panel */}
       <AnimatePresence>
         {open && (
           <motion.div
@@ -122,20 +128,19 @@ export function ChatBot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-6 right-6 z-50 w-[calc(100vw-3rem)] sm:w-96"
+            className="fixed bottom-6 right-6 z-50 w-[calc(100vw-3rem)] sm:w-[420px]"
           >
-            <Card className="flex h-[500px] flex-col overflow-hidden border-border/60 shadow-2xl">
-              {/* Header */}
+            <Card className="flex h-[560px] flex-col overflow-hidden border-border/60 shadow-2xl">
               <CardHeader className="flex flex-row items-center justify-between border-b border-border/50 bg-primary/5 px-4 py-3">
                 <div className="flex items-center gap-3">
                   <div className="flex size-9 items-center justify-center rounded-full bg-primary/10">
                     <Bot className="size-5 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold">Assistant IA</p>
+                    <p className="text-sm font-semibold">Assistant Hamadou</p>
                     <p className="flex items-center gap-1 text-xs text-muted-foreground">
                       <span className="size-1.5 rounded-full bg-emerald-500" />
-                      En ligne
+                      En ligne · IA Gemini
                     </p>
                   </div>
                 </div>
@@ -149,7 +154,6 @@ export function ChatBot() {
                 </Button>
               </CardHeader>
 
-              {/* Messages */}
               <div ref={scrollRef} className="flex-1 overflow-y-auto p-4">
                 <div className="space-y-4">
                   {messages.map((msg, i) => (
@@ -176,13 +180,17 @@ export function ChatBot() {
                         )}
                       </div>
                       <div
-                        className={`max-w-[75%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed ${
+                        className={`max-w-[80%] rounded-2xl px-4 py-3 text-[13px] leading-relaxed ${
                           msg.role === 'user'
                             ? 'bg-primary text-primary-foreground'
-                            : 'bg-muted text-foreground'
+                            : 'bg-muted'
                         }`}
                       >
-                        {msg.content}
+                        {msg.role === 'assistant' ? (
+                          <BotMessage content={msg.content} />
+                        ) : (
+                          <p>{msg.content}</p>
+                        )}
                       </div>
                     </motion.div>
                   ))}
@@ -202,14 +210,13 @@ export function ChatBot() {
                   )}
                 </div>
 
-                {/* Quick replies */}
                 {messages.length <= 1 && !loading && (
                   <div className="mt-4 flex flex-wrap gap-2">
                     {QUICK_REPLIES.map((q) => (
                       <button
                         key={q}
                         onClick={() => sendMessage(q)}
-                        className="rounded-full border border-border/60 bg-background px-3 py-1.5 text-xs text-muted-foreground transition-colors hover:border-primary/30 hover:text-foreground"
+                        className="rounded-full border border-border/60 bg-background px-3 py-1.5 text-xs text-muted-foreground transition-colors hover:border-primary/40 hover:bg-primary/5 hover:text-foreground"
                       >
                         {q}
                       </button>
@@ -218,7 +225,6 @@ export function ChatBot() {
                 )}
               </div>
 
-              {/* Input */}
               <form
                 onSubmit={handleSubmit}
                 className="border-t border-border/50 p-3"
