@@ -129,6 +129,7 @@ export async function POST(request: Request) {
         )
 
         const data = await res.json()
+        console.log('GEMINI RESPONSE:', JSON.stringify(data).slice(0, 500))
         const text = data?.candidates?.[0]?.content?.parts?.[0]?.text
         if (text) {
           return NextResponse.json({ response: text })
