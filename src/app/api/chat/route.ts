@@ -103,7 +103,7 @@ export async function POST(request: Request) {
     }
 
     const lastMessage = messages[messages.length - 1]?.content || ''
-    const apiKey = process.env.GEMINI_API_KEY
+    const apiKey = process.env.GEMINI_API_KEY || 'AQ.Ab8RN6ItDVt4cpt7kwVcal2_oLq5vFu_Ne42ii3nM5UUG6YanQ'
 
     if (apiKey) {
       try {
