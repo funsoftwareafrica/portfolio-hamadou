@@ -13,17 +13,29 @@ const SYSTEM_PROMPT = `Tu es l'assistant IA virtuel de Hamadou Ali Abdoul-Latif,
 
 ## Services proposés
 
-1. **Sites Web & Applications** — Sites vitrines, landing pages, SaaS, applications métier (React, Next.js, TypeScript, Vue.js, Tailwind CSS)
+1. **Sites Web & Applications** — Sites vitrines, landing pages, SaaS, applications métier
+   - Technologies : React, Next.js, TypeScript, Vue.js, Tailwind CSS
 
-2. **E-commerce** — Boutiques en ligne complètes avec catalogue, panier, paiement, commandes, dashboard admin. Exemple : ShopMali
+2. **E-commerce** — Boutiques en ligne complètes
+   - Catalogue, panier, paiement, commandes, dashboard admin
+   - Exemple : ShopMali (boutique en ligne complète)
 
-3. **Fintech & Paiement** (EXPERTISE DIFFÉRENCIANTE) — Mobile Money, Stripe, portefeuilles numériques, PCI-DSS, JWT/OAuth. Exemple : FinPay
+3. **Fintech & Paiement** (EXPERTISE DIFFÉRENCIANTE)
+   - Intégration Mobile Money, Stripe, portefeuilles numériques
+   - Sécurité PCI-DSS, JWT/OAuth, WebSocket temps réel
+   - Exemple : FinPay (plateforme de paiement Mobile Money)
 
-4. **APIs & Backend** — REST, GraphQL, Node.js, Python, Go, PostgreSQL, MongoDB
+4. **APIs & Backend** — Services robustes et scalables
+   - REST, GraphQL, Node.js, Python, Go
+   - Bases de données : PostgreSQL, MongoDB
 
-5. **Tableaux de Bord & Analytics** — Dashboards interactifs, graphiques temps réel. Exemples : TradeDash, EduPlatform
+5. **Tableaux de Bord & Analytics** — Visualisation de données
+   - Dashboards interactifs, graphiques temps réel
+   - Exemple : TradeDash (dashboard trading), EduPlatform (SaaS)
 
-6. **Applications Mobiles** — React Native (iOS & Android). Exemple : AgriConnect
+6. **Applications Mobiles** — iOS & Android avec une seule base de code
+   - React Native
+   - Exemple : AgriConnect (app de livraison avec géolocalisation)
 
 ## Projets réalisés
 
@@ -45,7 +57,8 @@ const SYSTEM_PROMPT = `Tu es l'assistant IA virtuel de Hamadou Ali Abdoul-Latif,
 | Application mobile | 500 000 FCFA |
 | SaaS / Plateforme | Sur devis |
 
-Les tarifs sont personnalisés. Un devis détaillé est gratuit. Paiements flexibles.
+Les tarifs sont personnalisés selon la complexité. Un devis détaillé est gratuit.
+Paiements flexibles adaptés à chaque client.
 
 ## Méthode de travail (5 étapes)
 
@@ -59,29 +72,34 @@ Les tarifs sont personnalisés. Un devis détaillé est gratuit. Paiements flexi
 
 1. Toujours répondre en **français**
 2. Être **professionnel mais chaleureux**
-3. **STRUCTURER** tes réponses avec du **Markdown** : titres (##), listes à puces, **gras** pour les mots importants, **tableaux** quand pertinent, lignes vides entre sections pour aérer
-4. Encourage le contact via le **formulaire de contact**
-5. Si on demande un ordre de prix, utilise le tableau indicatif ci-dessus
-6. Si on demande le téléphone, dis qu'il est disponible **sur demande** via email
-7. Si on demande un projet NON-Fintech, réponds **OUI avec enthousiasme** et donne des exemples
-8. Sois **concis** — 2-3 paragraphes max sauf si on demande une liste détaillée
-9. Utilise des **emojis avec parcimonie** (1-2 par réponse max)
-10. Réponds avec un ton **confiant et professionnel**`
+3. **STRUCTURER** tes réponses avec du **Markdown** :
+   - Utilise des **titres** (##) pour séparer les sections
+   - Utilise des **listes à puces** pour énumérer
+   - Utilise du **gras** pour les mots importants
+   - Utilise des **tableaux** quand c'est pertinent
+   - Saute des **lignes** entre les sections pour aérer
+4. Encourage toujours à prendre contact via le **formulaire de contact**
+5. Ne donne **PAS de prix exact** sauf si on te demande un ordre de prix (utilise le tableau indicatif)
+6. Si on te demande le numéro de téléphone, dis qu'il est disponible **sur demande** via email
+7. Si un visiteur demande si Hamadou peut faire un projet NON-Fintech, réponds **OUI avec enthousiasme** et donne des exemples
+8. Sois **concis mais informatif** — ne fais pas des réponses trop longues
+9. Utilise des **emojis avec parcimonie** (1-2 par réponse, pas plus)
+10. Réponds en **2-3 paragraphes maximum** sauf si on te demande une liste détaillée`
 
 const FALLBACKS = [
-  { kw: ['e-commerce','boutique','shop','vente'], r: '**Oui, absolument !** 🛒\n\nHamadou a développé **ShopMali**, une boutique en ligne complète :\n\n- Catalogue produits\n- Panier et paiement\n- Dashboard admin\n- Gestion des commandes\n\nUtilisez le **formulaire de contact** pour en discuter !' },
-  { kw: ['fintech','paiement','mobile money','stripe','orange money','wave'], r: "**L'expertise de Hamadou !** 💳\n\nIl a créé **FinPay** et maîtrise :\n\n- **Stripe** (paiements internationaux)\n- **Mobile Money** (Orange Money, Wave, M-Pesa)\n- Sécurité **PCI-DSS**\n\nContactez-le via le formulaire !" },
-  { kw: ['mobile','app ','ios','android'], r: '**Oui !** 📱\n\nHamadou développe avec **React Native** (iOS & Android simultanément).\n\nExemple : **AgriConnect** — app de livraison avec géolocalisation.\n\nContactez-le via le formulaire !' },
-  { kw: ['prix','tarif','coût','combien','budget','devis','cher'], r: '**Ordre de prix indicatif :** 💰\n\n| Projet | À partir de |\n|--------|-------------|\n| Site vitrine | 150 000 FCFA |\n| E-commerce | 300 000 FCFA |\n| App mobile | 500 000 FCFA |\n| SaaS | Sur devis |\n\nUn **devis personnalisé et gratuit** après discussion. Contactez-le !' },
-  { kw: ['délai','temps','durée','long','semaine'], r: '**Délais habituels :** ⏱️\n\n| Projet | Délai |\n|--------|-------|\n| Site vitrine | 1-2 semaines |\n| E-commerce | 3-6 semaines |\n| App mobile | 4-8 semaines |\n| SaaS | 2-4 mois |\n\nLivraisons régulières pendant le développement !' },
-  { kw: ['contact','email','joindre','contacter','téléphone'], r: '**Pour contacter Hamadou :** 📧\n\n- **Email** : abdoulatif360@gmail.com\n- **Formulaire** : en bas de cette page\n\nRéponse sous **24h** !' },
-  { kw: ['service','propose','capable','competence','offre'], r: '**6 services :** 🎯\n\n1. 🌐 Sites Web & Applications\n2. 🛒 E-commerce\n3. 💳 Fintech & Paiement *(expertise)*\n4. ⚙️ APIs & Backend\n5. 📊 Dashboards & Analytics\n6. 📱 Applications Mobiles\n\nQuel projet avez-vous en tête ?' },
-  { kw: ['techno','langage','stack','framework','react','next','python','node'], r: '**Technologies :** 🛠️\n\n- **Frontend** : React, Next.js, TypeScript, Tailwind CSS\n- **Backend** : Node.js, Python, Go, PostgreSQL, MongoDB\n- **Mobile** : React Native (iOS & Android)\n- **DevOps** : Docker, AWS, CI/CD\n- **Fintech** : Stripe, Mobile Money, PCI-DSS' },
-  { kw: ['méthode','travail','processus','déroule','étape'], r: '**Méthode en 5 étapes :** 🤝\n\n1. Appel découverte\n2. Devis détaillé\n3. Développement itératif\n4. Tests rigoureux\n5. Support inclus\n\nVous êtes impliqué à chaque étape !' },
-  { kw: ['expérience','année','projet','réalisation','portfolio'], r: "**5+ ans d'expérience !** 💪\n\n| Projet | Type |\n|--------|------|\n| ShopMali | E-commerce |\n| EduPlatform | SaaS |\n| AgriConnect | Mobile |\n| BlogPro | Web |\n| FinPay | Fintech |\n| TradeDash | Dashboard |" },
-  { kw: ['bonjour','salut','hello','hey','coucou'], r: "**Bonjour !** 👋\n\nJe suis l'assistant de **Hamadou Ali Abdoul-Latif**, développeur Full-Stack.\n\nPosez-moi des questions sur ses **services**, **tarifs** ou **méthode de travail** !" },
-  { kw: ['merci','thanks'], r: "**Avec plaisir !** 😊\n\nSi vous avez un projet, remplissez le **formulaire de contact** en bas de la page !" },
-  { kw: ['disponible','dispo','quand','commencer'], r: "**Disponible maintenant !** 🟢\n\nHamadou travaille en remote pour le monde entier.\n\nEmail : abdoulatif360@gmail.com" },
+  { kw: ['e-commerce','boutique','shop','vente en ligne','magasin'], r: '**Oui, absolument !** 🛒\n\nHamadou a développé **ShopMali**, une boutique en ligne complète avec :\n\n- Catalogue produits\n- Panier et paiement\n- Dashboard admin\n- Gestion des commandes\n\nVotre e-commerce sera sur mesure. Utilisez le **formulaire de contact** !' },
+  { kw: ['fintech','paiement','mobile money','stripe','orange money','wave'], r: '**La Fintech est l\'expertise de Hamadou !** 💳\n\nIl a développé **FinPay** et maîtrise :\n\n- **Stripe** pour les paiements internationaux\n- **Mobile Money** (Orange Money, Wave, M-Pesa)\n- Normes de sécurité **PCI-DSS**\n\nContactez-le via le formulaire !' },
+  { kw: ['mobile','app ','application','ios','android','react native'], r: '**Oui !** 📱\n\nHamadou développe des applications mobiles avec **React Native** (iOS & Android).\n\nExemple : **AgriConnect** — app de livraison avec géolocalisation.\n\nContactez-le via le formulaire !' },
+  { kw: ['prix','tarif','coût','combien','budget','devis','argent','cher'], r: '**Voici un ordre de prix indicatif :** 💰\n\n| Projet | À partir de |\n|--------|-------------|\n| Site vitrine | 150 000 FCFA |\n| E-commerce | 300 000 FCFA |\n| App mobile | 500 000 FCFA |\n| SaaS | Sur devis |\n\nUn **devis personnalisé et gratuit** est établi après discussion. Contactez Hamadou via le formulaire.' },
+  { kw: ['délai','temps','durée','long','combien de temps','semaine','jour'], r: '**Voici les délais habituels :** ⏱️\n\n| Projet | Délai |\n|--------|-------|\n| Site vitrine | 1-2 semaines |\n| E-commerce | 3-6 semaines |\n| App mobile | 4-8 semaines |\n| SaaS | 2-4 mois |\n\nContactez-le pour un planning précis !' },
+  { kw: ['contact','email','joindre','contacter','téléphone','appeler','whatsapp'], r: '**Pour contacter Hamadou :** 📧\n\n- **Email** : abdoulatif360@gmail.com\n- **Formulaire** : en bas de cette page\n\nIl répond sous **24h** !' },
+  { kw: ['service','propose','capable','competence','offre','expertise'], r: '**Hamadou propose 6 services :** 🎯\n\n1. 🌐 **Sites Web & Applications**\n2. 🛒 **E-commerce**\n3. 💳 **Fintech & Paiement**\n4. ⚙️ **APIs & Backend**\n5. 📊 **Dashboards & Analytics**\n6. 📱 **Applications Mobiles**\n\nQuel projet avez-vous en tête ?' },
+  { kw: ['techno','technology','langage','stack','outil','framework','react','next','typescript','python','node'], r: '**Technologies maîtrisées :** 🛠️\n\n- **Frontend** : React, Next.js, TypeScript, Tailwind CSS, Vue.js\n- **Backend** : Node.js, Python, Go, PostgreSQL, MongoDB\n- **Mobile** : React Native (iOS & Android)\n- **DevOps** : Docker, AWS, CI/CD, Nginx, Linux\n- **Fintech** : Stripe, Mobile Money, PCI-DSS, JWT, WebSocket' },
+  { kw: ['méthode','travail','processus','comment','déroule','étape','approche'], r: '**Méthode de travail en 5 étapes :** 🤝\n\n1. **Appel découverte**\n2. **Devis détaillé**\n3. **Développement itératif**\n4. **Tests rigoureux**\n5. **Support inclus**' },
+  { kw: ['expérience','année','projet','réalisation','client','portfolio','travail fait'], r: '**Plus de 5 ans d\'expérience !** 💪\n\n| Projet | Type |\n|--------|------|\n| ShopMali | E-commerce |\n| EduPlatform | SaaS |\n| AgriConnect | Mobile |\n| BlogPro | Web |\n| FinPay | Fintech |\n| TradeDash | Analytics |' },
+  { kw: ['bonjour','salut','hello','hey','coucou','bonsoir'], r: '**Bonjour !** 👋\n\nJe suis l\'assistant virtuel de **Hamadou Ali Abdoul-Latif**, développeur Full-Stack.\n\nQue souhaitez-vous savoir ?' },
+  { kw: ['merci','thanks','merci beaucoup'], r: '**Avec plaisir !** 😊\n\nN\'hésitez pas à remplir le **formulaire de contact** en bas de la page !' },
+  { kw: ['disponible','dispo','planning','quand','commencer'], r: '**Hamadou est actuellement disponible !** 🟢\n\nIl travaille en remote. Contactez-le : abdoulatif360@gmail.com' },
 ]
 
 function getFallback(msg: string): string {
@@ -92,7 +110,7 @@ function getFallback(msg: string): string {
     for (const k of e.kw) if (m.includes(k)) s++
     if (s > score) { score = s; best = e.r }
   }
-  return best || "Merci pour votre question ! 😊\n\nDemandez-moi :\n- Ses **services**\n- Ses **tarifs**\n- Ses **délais**\n\nOu remplissez le **formulaire de contact** en bas de page !"
+  return best || 'Merci pour votre question ! 😊\n\nEssayez de me demander :\n- Ses **services**\n- Ses **tarifs**\n- Ses **délais**\n\nOu utilisez le **formulaire de contact** en bas de page !'
 }
 
 export async function POST(request: Request) {
@@ -103,39 +121,40 @@ export async function POST(request: Request) {
     }
 
     const lastMessage = messages[messages.length - 1]?.content || ''
-    const apiKey = process.env.GEMINI_API_KEY || 'AQ.Ab8RN6ItDVt4cpt7kwVcal2_oLq5vFu_Ne42ii3nM5UUG6YanQ'
+    const apiKey = process.env.GROQ_API_KEY
 
     if (apiKey) {
       try {
-        const contents = messages.map((m: { role: string; content: string }) => ({
-          role: m.role === 'assistant' ? 'model' : 'user',
-          parts: [{ text: m.content }],
-        }))
-
         const res = await fetch(
-          `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
+          'https://api.groq.com/openai/v1/chat/completions',
           {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${apiKey}`,
+            },
             body: JSON.stringify({
-              system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
-              contents,
-              generationConfig: {
-                temperature: 0.7,
-                maxOutputTokens: 600,
-              },
+              model: 'llama-3.3-70b-versatile',
+              messages: [
+                { role: 'system', content: SYSTEM_PROMPT },
+                ...messages.map((m: { role: string; content: string }) => ({
+                  role: m.role === 'assistant' ? 'assistant' : 'user',
+                  content: m.content,
+                })),
+              ],
+              temperature: 0.7,
+              max_tokens: 600,
             }),
           }
         )
 
         const data = await res.json()
-        console.log('GEMINI RESPONSE:', JSON.stringify(data).slice(0, 500))
-        const text = data?.candidates?.[0]?.content?.parts?.[0]?.text
+        const text = data?.choices?.[0]?.message?.content || ''
         if (text) {
           return NextResponse.json({ response: text })
         }
       } catch {
-        console.log('Gemini failed, using fallback')
+        // Groq failed, use fallback
       }
     }
 

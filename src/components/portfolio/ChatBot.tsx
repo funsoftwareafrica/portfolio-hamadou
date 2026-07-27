@@ -141,7 +141,7 @@ export function ChatBot() {
                     <p className="text-sm font-semibold">Assistant Hamadou</p>
                     <p className="flex items-center gap-1 text-xs text-muted-foreground">
                       <span className="size-1.5 rounded-full bg-emerald-500" />
-                      En ligne · IA Gemini
+                      En ligne · IA
                     </p>
                   </div>
                 </div>
