@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardHeader } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 type Message = {
   role: 'user' | 'assistant'
@@ -23,7 +24,7 @@ const QUICK_REPLIES = [
 function BotMessage({ content }: { content: string }) {
   return (
     <div className="prose prose-sm max-w-none dark:prose-invert prose-p:my-1 prose-headings:my-2 prose-ul:my-1 prose-ol:my-1 prose-li:my-0.5 prose-strong:text-foreground prose-p:text-foreground/90 prose-li:text-foreground/90">
-      <ReactMarkdown>{content}</ReactMarkdown>
+      <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
     </div>
   )
 }
